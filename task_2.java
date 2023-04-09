@@ -74,6 +74,7 @@ public class task_2 {
             if(nameArrayList.get(i) == nameArrayList.get(i-1)) counter++;
         
             else{
+                
                 if(counter > 1) sorting.put(nameArrayList.get(i-1), counter);
                 counter = 1;
             }
@@ -81,8 +82,10 @@ public class task_2 {
         }
 
         while(sorting.isEmpty() == false){
+
             int maxValue = 0;
             String officeWorkerName = "";
+
             for(var item: sorting.entrySet()){
                 
                 if(item.getValue() > maxValue){ 
@@ -91,7 +94,6 @@ public class task_2 {
                     officeWorkerName = item.getKey();
 
                 }
-   
             }
             sorting.remove(officeWorkerName);
             
